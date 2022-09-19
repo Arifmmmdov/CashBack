@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/subItemList_cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="10sp"
+        android:layout_marginVertical="8dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:id="@+id/subItemList_image"
+            android:src="@drawable/ic_map_location"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/subItemList_cardView"
+        app:layout_constraintTop_toTopOf="@+id/subItemList_cardView"
+        android:layout_marginStart="16dp"
+        android:id="@+id/subItemList_company"
+        android:text = "Schafer Azerbaijan"
+        android:textColor="#231F20"
+        android:textSize="16sp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/subItemList_cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/subItemList_cardView"
+        android:layout_marginStart="16sp"
+        android:id="@+id/subItemList_explanation"
+        android:text="Other shops and services"
+        android:textColor="#63666A"
+        android:textSize="12sp"
+        />
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/subItemList_cardView"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/subItemList_percentage"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="5%"
+            android:background="@color/swipe_rename_color"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
