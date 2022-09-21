@@ -9,6 +9,6 @@
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container_view_partners_fragment"/>
+        android:id="@+id/partners_activity_container_view"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

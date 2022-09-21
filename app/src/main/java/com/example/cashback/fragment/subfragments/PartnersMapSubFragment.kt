@@ -1,4 +1,4 @@
-package com.example.e24_mobile_new.fragment.subfragments
+package com.example.cashback.fragment.subfragments
 
 import androidx.fragment.app.Fragment
 

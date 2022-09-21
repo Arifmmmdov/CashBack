@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:id="@+id/partners_item_constraint"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/partners_item_cardview"
@@ -15,17 +17,16 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/partners_item_imageview"
+            android:background="@drawable/ic_map_location"
+            android:id="@+id/partners_item_imageView"
             android:layout_gravity="center"
             app:cornerRadius="8sp"
             android:padding="20dp"
-            android:background="@color/grey"
-            android:src="@drawable/ic_map_location"
             />
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
-        android:layout_width="?android:id"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/partners_item_textview"
         android:gravity="center"

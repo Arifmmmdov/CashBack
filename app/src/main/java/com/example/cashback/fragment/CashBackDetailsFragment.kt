@@ -16,7 +16,14 @@ class CashBackDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        setListeners()
         return binding.root
+    }
+
+    private fun setListeners() {
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
 }

@@ -20,7 +20,7 @@
             android:id="@+id/page_title"
             android:layout_width="wrap_content"
             android:text="Partners"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_contact"
             app:layout_constraintStart_toEndOf="@+id/btn_back"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -29,10 +29,10 @@
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{ _ -> ((android.app.Activity)Context).onBackPressed() }"
             android:src="@drawable/back_icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
             android:id="@+id/btn_contact"
@@ -143,16 +143,40 @@
                 \n\nWorking days: Həftənin bütün günləri
                 \nWorking hours: 10:00-22:00"/>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/details_contact_info"
-                android:layout_marginTop="32dp"
-                android:textSize="16sp"
-                android:textColor="#231F20"
-                android:text="Сontact number : (99455) 551 69 41
-                \nWebsite : https://www.antaris.az/
-                \nAddress : Baku city, Nigar Rafibayli street 16"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details_contact_number"
+                    android:layout_marginTop="32dp"
+                    android:textSize="16sp"
+                    android:textColor="#231F20"
+                    android:text="Сontact number : (99455) 551 69 41"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details_contact_website"
+                    android:textSize="16sp"
+                    android:textColor="#231F20"
+                    android:text="Website : https://www.antaris.az/"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/details_contact_address"
+                    android:textSize="16sp"
+                    android:textColor="#231F20"
+                    android:text="Address : Baku city, Nigar Rafibayli street 16"/>
+            </LinearLayout>
+
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"

@@ -3,17 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/drawable-v24/circle_shape.xml" value="0.1" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/drawable/ic_filter.xml" value="0.1665" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/activity_main.xml" value="0.13" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/fragment_cash_back_details.xml" value="0.75" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/fragment_filter.xml" value="0.3552833078101072" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/fragment_partners.xml" value="0.25" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/partners_filter_item.xml" value="0.22" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/subfragment_partners_list.xml" value="0.1" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/subfragment_partners_map.xml" value="0.1" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/sublayout_partners_item.xml" value="0.1" />
-        <entry key="..\:/Users/arif.mammadov/AndroidStudioProjects/Cashback/app/src/main/res/layout/sublayout_partners_map.xml" value="0.1" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/drawable/ic_filter.xml" value="0.124" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/drawable/ic_show_list.xml" value="0.124" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/activity_main.xml" value="0.20072992700729927" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/fragment_cash_back_details.xml" value="0.536" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/fragment_filter.xml" value="0.264" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/fragment_partners.xml" value="0.3402061855670103" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/partners_filter_item.xml" value="1.6" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/subfragment_partners_list.xml" value="0.3055555555555556" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/subfragment_partners_map.xml" value="0.1296875" />
+        <entry key="..\:/Users/Arif/Cashback/app/src/main/res/layout/sublayout_partners_item.xml" value="0.4" />
       </map>
     </option>
   </component>

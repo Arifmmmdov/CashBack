@@ -31,11 +31,15 @@ class FilterFragment : Fragment() {
         binding.cashbackRangesSlider.addOnChangeListener(RangeSlider.OnChangeListener { slider, value, fromUser ->
             binding.cashbackWithPercentage.text = "${slider.values[0].toInt()} - ${slider.values[1].toInt()}%"
         })
+
+        binding.btnBack.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
     }
 
 
     private val cities = arrayListOf<String>(
-        "Baku", "Sumgait", "Xirdalan", "Mingachevir", "Ganja", "Lankaran"
+        "Baku", "Sumgait", "Xirdalan", "Mingachevir", "Ganja", "Lankaran","Agdam","Zangazur","Goyce"
     )
 
     //TODO Ui section done except transaction between Fragments

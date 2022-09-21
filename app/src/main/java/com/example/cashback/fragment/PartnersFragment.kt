@@ -8,19 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cashback.partners_adapter.PartnersFiltersAdapter
-import az.expressbank.e24.fragments.partners.subfragments.PartnersListSubFragment
+import com.example.cashback.fragment.subfragments.PartnersListSubFragment
 import az.expressbank.e24.models.partnersmodel.FilterModel
 import com.example.cashback.R
 import com.example.cashback.databinding.FragmentPartnersBinding
-import com.example.e24_mobile_new.fragment.subfragments.PartnersMapSubFragment
+import com.example.e24_mobile_new.fragment.FilterFragment
+import com.example.cashback.fragment.subfragments.PartnersMapSubFragment
+
 
 class PartnersFragment : Fragment() {
     private val binding by lazy {
         FragmentPartnersBinding.inflate(layoutInflater)
     }
 
-    private val mFragmentManager by lazy {
-        childFragmentManager
+    private val partnersListSubFragmentInstance by lazy {
+        PartnersListSubFragment()
     }
 
     override fun onCreateView(
@@ -30,7 +32,14 @@ class PartnersFragment : Fragment() {
         Log.d("MyTagHere", "onCreateView: ")
         setFilterAdapter()
         setListeners()
+        setDefaultSubFragmentView()
         return binding.root
+    }
+
+    private fun setDefaultSubFragmentView() {
+        childFragmentManager.beginTransaction()
+            .replace(R.id.partners_container_view, partnersListSubFragmentInstance)
+            .commit()
     }
 
     private fun setListeners() {
@@ -40,7 +49,7 @@ class PartnersFragment : Fragment() {
     }
 
     private fun setFilterAdapter() {
-        binding.recycFilter.adapter = PartnersFiltersAdapter(requireContext(),listOf(
+        binding.recycFilter.adapter = PartnersFiltersAdapter(partnersListSubFragmentInstance,layoutInflater,requireContext(),listOf(
             FilterModel(R.drawable.ic_map_location,"Location"),
             FilterModel(R.drawable.ic_filter,"Filter"),
             FilterModel(R.drawable.ic_show_list,"List")
@@ -49,12 +58,15 @@ class PartnersFragment : Fragment() {
     }
 
     private fun moveToFilterFragment(view:View) {
-        //TODO change to the Filter Fragment
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.partners_activity_container_view, FilterFragment())
+            .addToBackStack("")
+            .commit()
     }
 
     private fun showMapView(view: View) {
         if(!PartnersMapSubFragment().isVisible){
-            mFragmentManager.beginTransaction()
+            childFragmentManager.beginTransaction()
                 .replace(R.id.partners_container_view, PartnersMapSubFragment())
                 .commit()
         }
@@ -62,8 +74,8 @@ class PartnersFragment : Fragment() {
 
     private fun showListView(view:View) {
         if(!PartnersListSubFragment().isVisible){
-            mFragmentManager.beginTransaction()
-                .replace(R.id.partners_container_view,PartnersListSubFragment())
+            childFragmentManager.beginTransaction()
+                .replace(R.id.partners_container_view, partnersListSubFragmentInstance)
                 .commit()
         }
     }
