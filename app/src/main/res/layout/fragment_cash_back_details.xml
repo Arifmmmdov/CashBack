@@ -20,6 +20,8 @@
             android:id="@+id/page_title"
             android:layout_width="wrap_content"
             android:text="Partners"
+            android:textSize="20sp"
+            android:textColor="@color/partners_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_contact"
             app:layout_constraintStart_toEndOf="@+id/btn_back"
@@ -30,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_icon"
+            android:backgroundTint="@color/partners_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -47,7 +50,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingTop="6dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintTop_toBottomOf="@id/const_action_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         >
@@ -71,46 +74,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="24dp">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:id="@+id/partnersDetails_cardView"
-                    app:layout_constraintTop_toTopOf="parent"
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:background="@color/grey"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:cardCornerRadius="10sp"
-                    android:layout_marginVertical="8dp"
-                    >
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/grey"
-                        android:id="@+id/partnersDetails_image"
-                        android:src="@drawable/ic_map_location"/>
-                </androidx.cardview.widget.CardView>
-
+                    android:id="@+id/partnersDetails_image"
+                    android:src="@drawable/ic_map_location"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toRightOf="@+id/partnersDetails_cardView"
-                    app:layout_constraintTop_toTopOf="@+id/partnersDetails_cardView"
+                    app:layout_constraintLeft_toRightOf="@+id/partnersDetails_image"
+                    app:layout_constraintTop_toTopOf="@+id/partnersDetails_image"
                     android:layout_marginStart="16dp"
                     android:id="@+id/partnersDetails_company"
                     android:text = "Schafer Azerbaijan"
-                    android:textColor="#231F20"
-                    android:textSize="16sp"/>
+                    android:textColor="@color/exb_black"
+                    android:textSize="24sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintLeft_toRightOf="@+id/partnersDetails_cardView"
-                    app:layout_constraintBottom_toBottomOf="@+id/partnersDetails_cardView"
+                    app:layout_constraintLeft_toRightOf="@+id/partnersDetails_image"
+                    app:layout_constraintBottom_toBottomOf="@+id/partnersDetails_image"
                     android:layout_marginStart="16sp"
                     android:id="@+id/partnersDetails_explanation"
                     android:text="Other shops and services"
-                    android:textColor="#63666A"
-                    android:textSize="12sp"
+                    android:textColor="@color/exb_black"
+                    android:textSize="16sp"
                     />
 
                 <androidx.cardview.widget.CardView
@@ -118,7 +112,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="6sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/partnersDetails_cardView"
+                    app:layout_constraintTop_toTopOf="@id/partnersDetails_image"
                     >
                     <TextView
                         android:layout_width="match_parent"
@@ -138,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/company_detail"
                 android:textSize="16sp"
-                android:textColor="#231F20"
+                android:textColor="@color/exb_black"
                 android:text="Antaris is one of the leading companies of the Azerbaijan market, which offers high-quality and wide range of stationery, household supplies, furniture, safes, wardrobes, office IT equipment, as well as advertising production and printing services to customers at the most affordable price
                 \n\nWorking days: Həftənin bütün günləri
                 \nWorking hours: 10:00-22:00"/>
@@ -154,7 +148,7 @@
                     android:id="@+id/details_contact_number"
                     android:layout_marginTop="32dp"
                     android:textSize="16sp"
-                    android:textColor="#231F20"
+                    android:textColor="@color/exb_black"
                     android:text="Сontact number : (99455) 551 69 41"/>
 
                 <TextView
@@ -163,16 +157,15 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/details_contact_website"
                     android:textSize="16sp"
-                    android:textColor="#231F20"
+                    android:textColor="@color/exb_black"
                     android:text="Website : https://www.antaris.az/"/>
 
                 <TextView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/details_contact_address"
                     android:textSize="16sp"
-                    android:textColor="#231F20"
+                    android:textColor="@color/exb_black"
                     android:text="Address : Baku city, Nigar Rafibayli street 16"/>
             </LinearLayout>
 

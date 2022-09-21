@@ -32,14 +32,15 @@
         android:layout_marginStart="16dp"
         android:id="@+id/subItemList_company"
         android:text = "Schafer Azerbaijan"
-        android:textColor="#231F20"
+        android:textColor="@color/exb_black"
         android:textSize="16sp"/>
     
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@+id/subItemList_cardView"
-        app:layout_constraintBottom_toBottomOf="@+id/subItemList_cardView"
+        app:layout_constraintTop_toBottomOf="@id/subItemList_company"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="16sp"
         android:id="@+id/subItemList_explanation"
         android:text="Other shops and services"
@@ -47,9 +48,10 @@
         android:textSize="12sp"
         />
     
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cardElevation="0dp"
         app:cardCornerRadius="6sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/subItemList_cardView"
@@ -63,7 +65,7 @@
             android:textColor="@color/white"
             android:text="5%"
             android:background="@color/swipe_rename_color"/>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
 

@@ -1,11 +1,14 @@
 package com.example.cashback.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cashback.partners_adapter.PartnersFiltersAdapter
 import com.example.cashback.fragment.subfragments.PartnersListSubFragment
@@ -33,6 +36,7 @@ class PartnersFragment : Fragment() {
         setFilterAdapter()
         setListeners()
         setDefaultSubFragmentView()
+        setFocusBackground(binding.btnPartnersList,binding.btnPartnersMap)
         return binding.root
     }
 
@@ -66,14 +70,21 @@ class PartnersFragment : Fragment() {
 
     private fun showMapView(view: View) {
         if(!PartnersMapSubFragment().isVisible){
+            setFocusBackground(binding.btnPartnersMap,binding.btnPartnersList)
             childFragmentManager.beginTransaction()
                 .replace(R.id.partners_container_view, PartnersMapSubFragment())
                 .commit()
         }
     }
 
+    private fun setFocusBackground(toBeSoftYellow: ImageView, toBeGrey: ImageView) {
+        toBeSoftYellow.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.soft_yellow))
+        toBeGrey.setBackgroundColor(ContextCompat.getColor(requireContext(),R.color.grey))
+    }
+
     private fun showListView(view:View) {
         if(!PartnersListSubFragment().isVisible){
+            setFocusBackground(binding.btnPartnersList,binding.btnPartnersMap)
             childFragmentManager.beginTransaction()
                 .replace(R.id.partners_container_view, partnersListSubFragmentInstance)
                 .commit()
