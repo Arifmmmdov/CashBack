@@ -64,9 +64,10 @@
             app:cardBackgroundColor="@color/grey"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp">
-            <ImageButton
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
                 android:id="@+id/icon_filter"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/grey"
